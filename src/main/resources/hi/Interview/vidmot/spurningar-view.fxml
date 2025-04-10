@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="406.0" prefWidth="661.0" stylesheets="@css/interview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.Interview.vidmot.SpurningarController">
+   <children>
+      <ScrollPane layoutX="42.0" layoutY="24.0" prefHeight="129.0" prefWidth="236.0">
+        <content>
+            <ListView fx:id="fxSpurningaflokkar" styleClass="listview" />
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="43.0" layoutY="171.0" prefHeight="122.0" prefWidth="236.0">
+        <content>
+            <ListView fx:id="fxSpurningar" styleClass="listview" />
+        </content>
+      </ScrollPane>
+       <Label fx:id="fxFjoldaSvar" layoutX="522.0" layoutY="42.0" styleClass="labelar" text=" 0" />
+       <Label fx:id="fxLoggInn" layoutX="367.0" layoutY="72.0" styleClass="labelar" text="Logg:" />
+      <ButtonBar buttonMinWidth="175.0" layoutY="344.0" prefHeight="48.0" prefWidth="590.0">
+        <buttons>
+          <Button fx:id="fxSvara" mnemonicParsing="false" onAction="#onSvara" text="Svara" />
+            <Button fx:id="fxTilbaka" mnemonicParsing="false" onAction="#onTilbaka" text="Tilbaka" />
+            <Button fx:id="fxHaetta" mnemonicParsing="false" onAction="#onHaetta" text="Hætta" />
+        </buttons>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ButtonBar>
+      <Label layoutX="367.0" layoutY="41.0" styleClass="labelar" text="Fjöldi svaraðra spurninga:" />
+      <ListView fx:id="fxLogger" layoutX="367.0" layoutY="101.0" prefHeight="200.0" prefWidth="200.0" styleClass="svarLogg" />
+   </children>
+</AnchorPane>
